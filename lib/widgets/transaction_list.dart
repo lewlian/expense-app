@@ -12,8 +12,8 @@ class TransactionList extends StatelessWidget {
     return Container(
       height: 300,
       child: ListView.builder(
-        itemBuilder: (context,index){
-            return Card(
+        itemBuilder: (context, index) {
+          return Card(
             child: Row(
               children: [
                 Container(
@@ -23,10 +23,10 @@ class TransactionList extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color: Colors.purple),
+                        color: Theme.of(context).primaryColor),
                   ),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.purple),
+                    border: Border.all(color: Theme.of(context).primaryColor),
                   ),
                   padding: EdgeInsets.all(10),
                 ),
@@ -49,7 +49,7 @@ class TransactionList extends StatelessWidget {
             ),
           );
         },
-        itemCount:transactions.length,
+        itemCount: transactions.length,
       ),
     );
   }

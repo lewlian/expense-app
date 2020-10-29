@@ -10,7 +10,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
+    return MaterialApp(
+      home: MyHomePage(),
+      title: "Personal Expenses",
+      theme: ThemeData(primarySwatch: Colors.green, accentColor: Colors.yellow),
+    );
   }
 }
 
@@ -64,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           )
         ],
-        title: Text('Flutter App'),
+        title: Text('Personal Expenses'),
       ),
       body: SingleChildScrollView(
         child: Column(
