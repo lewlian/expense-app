@@ -54,9 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
+    final appBar = AppBar(actions: [
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
@@ -64,8 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           )
         ],
-        title: Text('Flutter App'),
-      ),
+        title: Text('Flutter App'),)
+    return Scaffold(
+      appBar: appBar,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
